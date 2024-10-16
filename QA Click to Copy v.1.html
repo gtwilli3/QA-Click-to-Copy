@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>QA Copy to Clipboard</title>
+    <style>
+        body {
+            background-color: #135d8f;
+        }
+	h1 {
+		color: white;
+	}
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            cursor: pointer;
+            padding: 8px;
+            margin-bottom: 4px;
+            background-color: #e0e0e0;
+        }
+        li:hover {
+            background-color: #c0c0c0;
+        }
+    </style>
+    <script>
+        function copyToClipboard(text) {
+            navigator.clipboard.writeText(text).catch(function(err) {
+                console.error('Failed to copy text: ', err);
+            });
+        }
+    </script>
+</head>
+<body>
+    <h1>Click an Item to Copy Text</h1>
+    <ul>
+        <li onclick="copyToClipboard('Behind Rebuttal')">Behind Rebuttal</li>
+        <li onclick="copyToClipboard('Fee Rebuttal')">Fee Rebuttal</li>
+        <li onclick="copyToClipboard('Sell Rebuttal')">Sell Rebuttal</li>
+        <li onclick="copyToClipboard('Don't have an Hour Rebuttal')">Don't have an Hour Rebuttal</li>
+        <li onclick="copyToClipboard('How did you get my Info Rebuttal')">How did you get my Info Rebuttal</li>
+        <li onclick="copyToClipboard('Email Rebuttal')">Email Rebuttal</li>
+        <!-- Add more items as needed -->
+    </ul>
+</body>
+</html>
